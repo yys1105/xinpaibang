@@ -1,0 +1,103 @@
+/* 元素相关 */
+*
+  word-wrap break-word
+
+img[lazy=loaded]
+  animation-name fadeIn
+  animation-duration 400ms
+
+[v-cloak]
+  display none
+
+html, body
+  height 100%
+
+body::-webkit-scrollbar
+  width .5em
+  height .5em
+
+body::-webkit-scrollbar-track
+  background-color #fff
+  -webkit-box-shadow inset 0 0 6px #fff
+
+body::-webkit-scrollbar-thumb
+  background-color lightgray
+
+input, aside, dl, dt, dd
+  box-sizing border-box
+
+::-webkit-input-placeholder {
+  color: #BBBEC4;
+  text-overflow: ellipsis;
+}
+
+:-moz-placeholder {
+  color: #BBBEC4 !important;
+  text-overflow: ellipsis;
+}
+
+::-moz-placeholder {
+  color: #BBBEC4 !important;
+  text-overflow: ellipsis;
+}
+
+/* for the future */
+:-ms-input-placeholder {
+  color: #BBBEC4 !important;
+  text-overflow: ellipsis;
+}
+
+a
+  text-decoration none
+  color $sky
+  cursor pointer
+  user-select none
+  &:hover
+    text-decoration underline
+
+/* h1 - h6 字体 */
+h1
+  font-size 32px
+
+h2
+  font-size 24px
+
+h3
+  font-size 20px
+
+h4
+  font-size 18px
+
+h5
+  font-size 16px
+
+h6
+  font-size 14px
+/* 文本区域拉伸 */
+textarea
+  resize vertical
+
+/* 按钮 */
+.btn
+  display inline-block
+  border-radius 4px
+  cursor pointer
+  padding 8px 15px
+
+  &.btn-primary
+    background-color $sky
+    border 1px solid $sky
+    outline none
+    color #fff
+  &.btn-ghost
+    background-color #fff
+    border 1px solid $sky
+    outline none
+    color $sky
+
+/* 文字按钮 */
+.text-button
+  border 0;
+  background #fff;
+  cursor pointer;
+/* 按钮一样的 */

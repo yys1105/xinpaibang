@@ -1,0 +1,385 @@
+@import 'variables.styl'
+@import 'mixin.styl'
+
+@import '_color.styl'
+@import '_element.styl'
+@import '_font.styl'
+@import '_support.styl'
+
+@keyframes fadeIn
+  from
+    opacity 0
+  to
+    opacity 1
+
+.app-shell
+  width: 100%;
+  padding-top $appHeaderHeight;
+  .header-banner
+    display: block;
+    min-height: 60px;
+    img-center('all')
+    img
+      width: 100%;
+      min-height: 60px;
+
+/* 文章容器 */
+.content-container
+  box-sizing border-box
+  margin 0 auto
+  width $pageWidth
+  position relative
+  //padding-top $appHeaderHeight
+
+.label-item + .label-item
+  margin-left 10px
+
+.content-view
+  width $mainPanel
+  display inline-block
+
+.right-side
+  width $asidePanel
+  float right
+  margin-left $panelGutter
+  padding-top 78px
+
+//  editor
+
+.ql-toolbar,
+.ql-container
+  border 0 !important
+
+.ql-editor
+  border-top 1px solid #ededed
+
+.card-style
+  box-shadow 0 0 3px $lightAsh
+  border-radius 2px
+  background-color #fff
+  position relative
+
+.img-max
+  img
+    max-width 100% !important
+
+.article-content,
+.detail-content
+  line-height 20px
+  *
+    max-width 100%
+  p
+    margin 18px 0
+  pre
+    white-space pre-wrap
+    word-wrap break-word
+
+.aside-button
+  width 268px
+  height 58px
+  margin-left 1px
+  outline none
+  border-radius 4px
+  border 1px solid transparent
+  color #fff
+  background-color $sky
+  font-size 18px
+  & + .aside-button
+    margin-top ($panelGutter/ 2)
+  &:active
+    background-color #2179CE
+  &.ghost
+    color $sky
+    background-color transparent
+    border 1px solid $sky
+    &:active
+      color #00478c
+      border 1px solid #00478c
+
+.modal
+  user-select none
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  z-index 101
+  background-color rgba(0, 0, 0, .2)
+  transition all 200ms
+  .phone-change-box
+    width 474px
+    min-height 278px
+    background-color #fff
+    margin 15% auto
+    padding 40px 60px
+    position relative
+    .close-icon
+      position absolute
+      right 15px
+      top 15px
+      cursor pointer
+    .box-content
+      > *
+        margin-top 12px
+
+.xpb-btn
+  display block
+  background-color $sky
+  color #fff
+  transition opacity 200ms
+  &:hover
+    opacity .8
+  &:active
+    opacity .6
+
+/* 提问弹出框中的 iview 组件样式修改 */
+.quiz-modal
+  .ivu-select-selection
+    height 40px
+    .ivu-tag
+      height 32px
+      line-height 32px
+  .ivu-select-input
+    height 36px
+  .ivu-select-multiple
+    .ivu-select-item-selected:after
+      position absolute
+      right 20px
+/* write-box 界面的 富文本样式修改 */
+.write-box
+  .ql-editor
+    border 1px solid #ededed
+    height 240px
+    min-height auto
+
+/* write 界面的 富文本样式修改 */
+.write
+  .ql-editor
+    height 350px
+/**/
+.rich-text
+  .w-e-text
+    min-height 300px;
+    overflow-y auto;
+  .w-e-text-container .w-e-panel-container
+    position fixed;
+    z-index 110 !important;
+    top 200px;
+
+// 调整设置界面折叠面板的样式
+#setting-box
+  .ivu-collapse
+    border-radius 0
+    border 0
+  .ivu-collapse-header
+    background-color #fff
+    padding 0 20px
+    height 50px
+    line-height 50px
+    p
+      height 50px
+      line-height 50px
+    > i
+      display none
+  .ivu-collapse-content
+    border-top 1px dotted #bebebe
+  .setting-head
+    font-size 18px
+    .panel-state
+      font-size 14px
+      float right
+      height 50px
+      line-height 50px
+      .iconfont
+        display inline-block
+        transition transform 300ms
+        &.rotate
+          transform rotate(90deg)
+
+// 问题回答
+.reply-list
+  margin-top 20px
+  > .reply-head
+    box-shadow 0 0 3px $lightAsh
+    border-radius 2px
+    text-align center
+    background-color #fff
+    line-height 60px
+    color #999
+    font-size 18px
+  > .reply-foot
+    box-shadow 0 0 3px $lightAsh
+    border-radius 2px
+    text-align center
+    background-color #fff
+    line-height 60px
+    color #999
+    font-size 18px
+    margin-bottom 20px
+    cursor pointer
+
+.border
+  border 1px solid #ccc !important
+  background-color #fff
+  padding 8px
+
+.img-control
+  width 100%
+  position absolute
+  top 50%
+  left 0
+  transform translateY(-50%)
+  img
+    width 100%
+
+/* 链接标题文字 */
+.link
+  cursor pointer
+  user-select none
+
+/* 下拉菜单调整 */
+.ivu-dropdown-rel
+  padding-right 20px
+
+.cover
+  position absolute
+  left 0
+  right 0
+  top 0
+  bottom 0
+  text-align center
+  background-color rgba(255, 255, 255, .8)
+  .link
+    display table
+    height 100%
+    width 100%
+  .text
+    //display block
+    font-size 14px
+    line-height normal
+    position absolute
+    top 50%
+    left 0
+    right 0
+    margin -7px 0 0 0
+  .cover-bottom-text
+    position absolute
+    width 100%
+    line-height 1.2
+    bottom 0
+    text-align center
+    font-size 14px
+
+
+
+.update-co-img-list
+  text-align center
+  margin-bottom 40px
+  .update-co-img
+    display block
+    position relative
+    width 421px
+    margin 40px auto
+    border 10px solid #ccc
+    padding 5px
+    img
+      float left
+      display inline-block
+      width 100%
+    .cover
+      user-select none
+      cursor pointer
+      span
+        position absolute
+        top 50%
+        margin-top -10px
+        font-size 18px
+        line-height 1
+        width 100%
+        left 0
+        color #000
+
+.img-wrap
+  border 1px solid $borderDefault
+  width 106px
+  height 82px
+  display inline-block
+  float right
+  user-select none
+  cursor pointer
+  &.active
+    border-color #A3C8ED
+  & + .img-wrap
+    margin-right 12px
+  img-center('horizon')
+  .text
+    user-select none
+    cursor pointer
+
+.none-item-tips
+  height 80px
+  line-height 80px
+  color #06c
+  user-select none
+  cursor pointer
+
+.img-delete
+  position absolute
+  right 0
+  top 0
+  display none
+  width 20px
+  height 20px
+  font-size 14px
+  line-height 20px
+  overflow hidden
+  background-color rgba(255,255,255,.8)
+  z-index 10
+  i
+    font-size 20px
+
+.show
+  display block !important
+
+.item-page
+  padding-top 20px
+  .co-label
+    background-color $borderDefault
+    line-height 40px
+    padding-left 20px
+    a
+      color #333
+      text-decoration none
+      &:hover
+        color #57a3f3
+
+
+
+
+.item-intro
+  .info-img-area
+    img
+      width 100%
+
+.product-list
+  position relative
+  .more-product
+    width 100%
+    position absolute
+    bottom 10px
+
+.ivu-dropdown-rel
+  padding-right: 0;
+
+.header-content
+  .ivu-poptip-popper
+    min-width: 100px;
+  .ivu-poptip-body
+    padding: 10px 0;
+    .dropdown-item
+      padding: 5px 0;
+      &:hover
+        background-color: #f0f0f0;
+  .header-menu
+    padding 10px;
+    margin 10px 0;

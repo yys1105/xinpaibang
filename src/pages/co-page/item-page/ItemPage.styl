@@ -1,0 +1,67 @@
+@import '../../../assets/style/variables.styl'
+@import '../../../assets/style/mixin.styl'
+
+colorGray = #eee
+
+section
+  margin-top 20px
+
+.item-page
+  padding-top 20px
+  .co-label
+    background-color colorGray
+    line-height 40px
+    padding-left 20px
+
+.buy-box
+  float left
+  width 600px
+  margin-left 40px
+  .item-title
+    font-size 20px
+    height 68px
+  .item-operate
+    border 1px solid #A3C8ED
+    background-color #F9FCFF
+    width 600px
+    height 382px
+    padding 20px 40px
+    .label
+      color #999
+      line-height 25px
+      font-size 14px
+    .item-price
+      height 128px
+      line-height 128px
+      border-bottom 2px dashed #428EDA
+      .price
+        font-size 28px
+        color #f30
+    .item-num-select,
+    .buy-button,
+    .co-meta
+      margin-top 40px
+
+
+.tabs
+  border-bottom 1px solid $sky
+  li
+    display inline-block
+    float left
+    width 108px
+    height 40px
+    line-height 40px
+    text-align center
+    user-select none
+    cursor pointer
+    &.current
+      background-color $sky
+      color #fff
+
+.site-info
+  text-align center
+  padding 20px 0
+  border-bottom 1px solid $sky
+  h5,
+  p
+    line-height 50px

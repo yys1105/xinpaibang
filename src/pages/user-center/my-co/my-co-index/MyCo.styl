@@ -1,0 +1,54 @@
+@import '../../../../assets/style/variables.styl'
+@import '../../../../assets/style/mixin.styl'
+
+headerLineHeight = 106px
+.company-page-header
+  padding 40px 0
+  height headerLineHeight
+  box-sizing content-box
+  .link
+    text-decoration none
+    font-size 13px
+
+  .co-name,
+  .co-banner,
+  .co-banner-right
+    height headerLineHeight
+    line-height 106px
+
+  .co-banner,
+  .co-banner-right
+    img
+      max-height headerLineHeight
+      max-width 204px
+    img-center('all')
+
+  .co-name
+    img
+      height 16px
+
+.tab-list
+  .tab
+    display inline-block
+    width 150px
+    height 32px
+    line-height 32px
+    text-align center
+    user-select none
+    color #333
+    background-color #fff
+    transition background-color 200ms
+    cursor pointer
+    &:hover
+      background-color #f9f9f9
+    &.active
+      background-color #eee
+
+.right-img-cover
+  .link
+    line-height headerLineHeight
+
+.cover
+  a
+    font-size 13px
+    text-decoration none

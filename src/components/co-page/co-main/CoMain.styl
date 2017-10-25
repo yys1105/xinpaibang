@@ -1,0 +1,43 @@
+@import '../../../assets/style/mixin.styl'
+
+.company-banner
+  height 256px
+  background-color #ededed
+  margin-bottom 20px
+  img-center('horizon')
+  img
+    height 256px
+
+.content-view
+  width 930px
+  .co-item
+    width 270px
+    height 400px
+    display inline-block
+    float left
+    margin 0 20px 40px
+
+.main-data-list
+  margin 40px 0
+
+.co-info
+  float right
+  width 290px
+  padding 0 20px
+  .info-item
+    display block
+    padding 20px
+    .info-label
+      display inline-block
+      color #333
+      width 80px
+    .info-value
+      display inline-block
+      color #999
+      width 125px
+      overflow-wrap break-word
+      word-wrap break-word
+      vertical-align text-top
+
+    &+.info-item
+      border-top 1px dashed #999

@@ -1,0 +1,43 @@
+@import '../../assets/style/variables.styl'
+@import '../../assets/style/mixin.styl'
+
+
+.company-page-header
+  padding 40px 0
+
+  .co-name,
+  .co-banner,
+  .co-right
+    height 106px
+    line-height 106px
+
+  .co-banner,
+  .co-right
+    img-center('all')
+
+  .co-banner,
+  .co-right
+    img
+      max-width 204px
+      max-height 106px
+
+  .co-name
+    img
+      height 16px
+
+.tab-list
+  .tab
+    display inline-block
+    width 150px
+    height 32px
+    line-height 32px
+    text-align center
+    user-select none
+    color #333
+    background-color #fff
+    transition background-color 200ms
+    cursor pointer
+    &:hover
+      background-color #f9f9f9
+    &.active
+      background-color #eee

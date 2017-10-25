@@ -1,0 +1,19 @@
+/* 图片居中处理 */
+img-center(direction = 'horizon')
+  position relative
+  overflow hidden
+  img
+    position absolute
+    if direction == 'horizon'
+      height 100%
+      left 50%
+      transform translate(-50%)
+    if direction == 'vertical'
+      width 100%
+      top 50%
+      transform translateY(-50%)
+    /* 需要限制宽高，将自适应宽高并且等比例缩放 */
+    if direction == 'all'
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)

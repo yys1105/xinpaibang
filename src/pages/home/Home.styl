@@ -1,0 +1,58 @@
+@import '../../assets/style/variables.styl'
+
+.home-banner
+  height 313px
+  background-color #f0f0f0
+  overflow hidden
+  .carousel-item
+    height 313px
+    text-align center
+    position relative
+    overflow hidden
+    img
+      min-height 313px
+      max-width 910px
+    .carousel-info
+      position absolute
+      width 910px
+      bottom 0
+      height 80px
+      background-color rgba(0, 0, 0, .6)
+      color #fff
+      line-height 80px
+      text-overflow ellipsis
+      overflow hidden
+      padding 0 20px
+
+
+.list-title
+  margin-bottom 20px
+
+.article-list, .q-list
+  display inline-block
+  float left
+  width 600px
+
+.q-list
+  margin-left 20px
+
+.list-view
+  padding-top 40px
+
+.main-data-title
+  border-bottom 1px solid #ddd
+  padding 15px 0
+  margin 15px 0
+  .main-data-title-item
+    font-size 20px
+    color #999
+    padding 0 10px
+    position relative
+    cursor pointer
+    user-select none
+    &.active
+      color #333
+      &::before
+        content '·'
+        position absolute
+        left 3px
